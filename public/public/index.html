@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <header class="border-b z-30 fixed top-0 left-0 right-0">
+        <div class="flex flex-col w-full max-w-screen-xl mx-auto">
+            <nav class="relative p-4 flex justify-between items-center bg-white ">
+                <a class="text-3xl font-bold leading-none" href="#">
+                    <svg width="116" height="31" viewBox="0 0 116 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M49 5C49 2.23858 51.2386 0 54 0H75C77.7614 0 80 2.23858 80 5V26C80 28.7614 77.7614 31 75 31H54C51.2386 31 49 28.7614 49 26V5Z"
+                            fill="#3B81F6" />
+                        <path
+                            d="M2.78 9.18C2.94 8.27333 3.60667 7.82 4.78 7.82L3.92 12.7C3.69333 12.86 3.52667 13.0067 3.42 13.14L3.46 13.24C3.94 12.8133 4.49333 12.4733 5.12 12.22C5.76 11.9533 6.35333 11.82 6.9 11.82C7.9 11.82 8.7 12.0867 9.3 12.62C9.91333 13.1533 10.22 13.84 10.22 14.68C10.22 14.88 10.2 15.08 10.16 15.28L9.56 18.7C9.37333 19.78 8.88667 20.6333 8.1 21.26C7.31333 21.8733 6.32667 22.18 5.14 22.18C3.82 22.18 2.80667 21.6067 2.1 20.46L2.02 20.54L2.34 21.04C2.22 21.8 1.6 22.18 0.48 22.18L2.78 9.18ZM5 20.64C5.8 20.64 6.44 20.4667 6.92 20.12C7.41333 19.7733 7.72 19.2733 7.84 18.62L8.42 15.36C8.44667 15.1467 8.46 14.9933 8.46 14.9C8.46 13.8733 7.74 13.36 6.3 13.36C5.60667 13.36 4.98 13.5467 4.42 13.92C3.86 14.2933 3.53333 14.74 3.44 15.26L2.84 18.72C2.82667 18.7867 2.82 18.8867 2.82 19.02C2.82 19.4867 3.02 19.8733 3.42 20.18C3.83333 20.4867 4.36 20.64 5 20.64ZM17.4342 13.36C16.7009 13.36 16.0409 13.58 15.4542 14.02C14.8809 14.46 14.5409 15.0067 14.4342 15.66L13.5142 20.9C13.4342 21.34 13.2342 21.6667 12.9142 21.88C12.5942 22.08 12.1409 22.18 11.5542 22.18L13.1142 13.3C13.3009 12.3133 13.9476 11.82 15.0542 11.82L14.8542 13.04C14.6809 13.2 14.4942 13.4 14.2942 13.64L14.3742 13.72C15.4676 12.4533 16.6342 11.82 17.8742 11.82C18.2742 11.82 18.5876 11.9067 18.8142 12.08C19.0542 12.2533 19.1742 12.4933 19.1742 12.8C19.1742 13.0933 19.0676 13.38 18.8542 13.66C18.4942 13.46 18.0209 13.36 17.4342 13.36ZM22.5519 10.32C22.2185 10.32 21.9452 10.2267 21.7319 10.04C21.5319 9.84 21.4319 9.58667 21.4319 9.28C21.4319 8.89333 21.5852 8.55333 21.8919 8.26C22.2119 7.96667 22.5785 7.82 22.9919 7.82C23.3119 7.82 23.5719 7.92 23.7719 8.12C23.9852 8.30667 24.0919 8.54667 24.0919 8.84C24.0919 9.22667 23.9319 9.57333 23.6119 9.88C23.3052 10.1733 22.9519 10.32 22.5519 10.32ZM21.1719 13.1C21.3319 12.2467 21.9852 11.82 23.1319 11.82L21.5319 20.9C21.4519 21.34 21.2519 21.6667 20.9319 21.88C20.6119 22.08 20.1585 22.18 19.5719 22.18L21.1719 13.1ZM26.1416 13.3C26.3282 12.3133 26.9749 11.82 28.0816 11.82L27.8616 13.1C27.6749 13.26 27.5016 13.44 27.3416 13.64L27.4216 13.72C27.9282 13.1333 28.5349 12.6733 29.2416 12.34C29.9616 11.9933 30.6749 11.82 31.3816 11.82C32.2749 11.82 32.9882 12.08 33.5216 12.6C34.0682 13.1067 34.3416 13.7667 34.3416 14.58C34.3416 14.7933 34.3216 15.02 34.2816 15.26L33.2816 20.9C33.2016 21.34 33.0016 21.6667 32.6816 21.88C32.3616 22.08 31.9082 22.18 31.3216 22.18L32.5016 15.44C32.5416 15.24 32.5616 15.06 32.5616 14.9C32.5616 13.8733 31.9416 13.36 30.7016 13.36C30.2082 13.36 29.7216 13.4667 29.2416 13.68C28.7749 13.8933 28.3749 14.18 28.0416 14.54C27.7216 14.8867 27.5282 15.26 27.4616 15.66L26.5416 20.9C26.4616 21.34 26.2616 21.6667 25.9416 21.88C25.6216 22.08 25.1682 22.18 24.5816 22.18L26.1416 13.3ZM38.9158 26.18C38.2891 26.18 37.7091 26.08 37.1758 25.88C36.6558 25.68 36.2358 25.4133 35.9158 25.08C35.6091 24.7467 35.4558 24.38 35.4558 23.98C35.4558 23.5667 35.5824 23.2467 35.8358 23.02C36.1024 22.8067 36.4758 22.7 36.9558 22.7C36.9424 22.7667 36.9358 22.8733 36.9358 23.02C36.9358 23.5533 37.1358 23.9733 37.5358 24.28C37.9358 24.5867 38.4824 24.74 39.1758 24.74C40.0291 24.74 40.7091 24.5267 41.2158 24.1C41.7224 23.6867 42.0424 23.0733 42.1758 22.26L42.3758 21.1C42.6291 20.9 42.7958 20.7533 42.8758 20.66L42.8358 20.56C42.3558 20.9867 41.7958 21.3333 41.1558 21.6C40.5291 21.8533 39.9358 21.98 39.3758 21.98C38.7491 21.98 38.1824 21.8533 37.6758 21.6C37.1691 21.3333 36.7691 20.9733 36.4758 20.52C36.1958 20.0667 36.0558 19.5667 36.0558 19.02C36.0558 18.9267 36.0691 18.76 36.0958 18.52L36.6558 15.3C36.8424 14.1933 37.3291 13.34 38.1158 12.74C38.9024 12.1267 39.9158 11.82 41.1558 11.82C42.4624 11.82 43.4558 12.3933 44.1358 13.54L44.2158 13.46C44.1091 13.26 44.0091 13.0933 43.9158 12.96C44.0358 12.2 44.6558 11.82 45.7758 11.82L43.9558 22.08C43.7158 23.4133 43.1624 24.4267 42.2958 25.12C41.4291 25.8267 40.3024 26.18 38.9158 26.18ZM39.9758 20.46C40.6691 20.46 41.2958 20.2733 41.8558 19.9C42.4291 19.5133 42.7624 19.06 42.8558 18.54L43.4158 15.28C43.4291 15.2133 43.4358 15.1267 43.4358 15.02C43.4358 14.5267 43.2291 14.1267 42.8158 13.82C42.4158 13.5 41.9024 13.34 41.2758 13.34C39.5958 13.34 38.6358 14.02 38.3958 15.38L37.8558 18.44C37.8291 18.5467 37.8158 18.7067 37.8158 18.92C37.8158 19.9467 38.5358 20.46 39.9758 20.46ZM87.1358 22.18C86.4024 22.18 85.8224 21.98 85.3958 21.58C84.9824 21.18 84.7758 20.6267 84.7758 19.92C84.7758 19.7067 84.7958 19.48 84.8358 19.24L85.8558 13.4H83.9958C84.0758 12.9467 84.2291 12.6 84.4558 12.36C84.6958 12.12 84.9958 12 85.3558 12H86.1158L86.4558 10.1C86.6158 9.24667 87.2691 8.82 88.4158 8.82L87.8358 12H90.4958C90.3358 12.9333 89.8358 13.4 88.9958 13.4H87.6158L86.5958 19.18C86.5558 19.38 86.5358 19.5533 86.5358 19.7C86.5358 20.0333 86.6224 20.2733 86.7958 20.42C86.9824 20.5667 87.2758 20.64 87.6758 20.64C88.1291 20.64 88.5958 20.52 89.0758 20.28C89.1691 20.4133 89.2158 20.58 89.2158 20.78C89.2158 21.18 89.0158 21.5133 88.6158 21.78C88.2158 22.0467 87.7224 22.18 87.1358 22.18ZM96.985 13.36C96.2517 13.36 95.5917 13.58 95.005 14.02C94.4317 14.46 94.0917 15.0067 93.985 15.66L93.065 20.9C92.985 21.34 92.785 21.6667 92.465 21.88C92.145 22.08 91.6917 22.18 91.105 22.18L92.665 13.3C92.8517 12.3133 93.4983 11.82 94.605 11.82L94.405 13.04C94.2317 13.2 94.045 13.4 93.845 13.64L93.925 13.72C95.0183 12.4533 96.185 11.82 97.425 11.82C97.825 11.82 98.1383 11.9067 98.365 12.08C98.605 12.2533 98.725 12.4933 98.725 12.8C98.725 13.0933 98.6183 13.38 98.405 13.66C98.045 13.46 97.5717 13.36 96.985 13.36ZM102.103 10.32C101.769 10.32 101.496 10.2267 101.283 10.04C101.083 9.84 100.983 9.58667 100.983 9.28C100.983 8.89333 101.136 8.55333 101.443 8.26C101.763 7.96667 102.129 7.82 102.543 7.82C102.863 7.82 103.123 7.92 103.323 8.12C103.536 8.30667 103.643 8.54667 103.643 8.84C103.643 9.22667 103.483 9.57333 103.163 9.88C102.856 10.1733 102.503 10.32 102.103 10.32ZM100.723 13.1C100.883 12.2467 101.536 11.82 102.683 11.82L101.083 20.9C101.003 21.34 100.803 21.6667 100.483 21.88C100.163 22.08 99.7093 22.18 99.1227 22.18L100.723 13.1ZM105.692 13.24C105.772 12.7867 105.979 12.44 106.312 12.2C106.646 11.9467 107.079 11.82 107.612 11.82L107.412 12.94C107.226 13.1133 107.059 13.2867 106.912 13.46L106.952 13.54C108.086 12.3933 109.299 11.82 110.592 11.82C111.579 11.82 112.372 12.0867 112.972 12.62C113.572 13.14 113.872 13.82 113.872 14.66C113.872 14.86 113.852 15.0733 113.812 15.3L113.212 18.72C113.026 19.8 112.519 20.6467 111.692 21.26C110.879 21.8733 109.859 22.18 108.632 22.18C108.059 22.18 107.526 22.06 107.032 21.82C106.539 21.58 106.119 21.2267 105.772 20.76L105.692 20.86C105.826 21.06 105.939 21.2067 106.032 21.3L105.412 24.82C105.252 25.7267 104.586 26.18 103.412 26.18L105.692 13.24ZM108.652 20.64C109.426 20.64 110.066 20.4667 110.572 20.12C111.079 19.76 111.386 19.2667 111.492 18.64L112.072 15.38C112.099 15.1933 112.112 15.0533 112.112 14.96C112.112 14.4533 111.919 14.06 111.532 13.78C111.159 13.5 110.619 13.36 109.912 13.36C109.206 13.36 108.579 13.5467 108.032 13.92C107.486 14.2933 107.166 14.7467 107.072 15.28L106.472 18.74C106.459 18.8067 106.452 18.9067 106.452 19.04C106.452 19.52 106.652 19.9067 107.052 20.2C107.452 20.4933 107.986 20.64 108.652 20.64Z"
+                            fill="black" />
+                        <path
+                            d="M53.4658 13.3C53.6524 12.3133 54.2924 11.82 55.3858 11.82L55.1658 13.1C54.9658 13.2867 54.7924 13.4667 54.6458 13.64L54.7258 13.72C55.8191 12.4533 56.9324 11.82 58.0658 11.82C58.5858 11.82 59.0258 11.9733 59.3858 12.28C59.7458 12.5867 59.9858 13.0133 60.1058 13.56C60.5591 13 61.0791 12.5733 61.6658 12.28C62.2658 11.9733 62.8791 11.82 63.5058 11.82C64.2924 11.82 64.9124 12.06 65.3658 12.54C65.8191 13.0067 66.0458 13.64 66.0458 14.44C66.0458 14.6133 66.0191 14.8867 65.9658 15.26L64.9658 20.9C64.8858 21.34 64.6858 21.6667 64.3658 21.88C64.0591 22.08 63.6124 22.18 63.0258 22.18L64.2258 15.36C64.2658 15.1333 64.2858 14.92 64.2858 14.72C64.2858 14.2667 64.1724 13.92 63.9458 13.68C63.7191 13.44 63.3791 13.32 62.9258 13.32C62.2991 13.32 61.7391 13.5333 61.2458 13.96C60.7524 14.3867 60.4524 14.92 60.3458 15.56L59.4058 20.9C59.3258 21.34 59.1324 21.6667 58.8258 21.88C58.5191 22.08 58.0724 22.18 57.4858 22.18L58.6858 15.36C58.7258 15.1333 58.7458 14.92 58.7458 14.72C58.7458 14.2667 58.6324 13.92 58.4058 13.68C58.1791 13.44 57.8391 13.32 57.3858 13.32C56.7724 13.32 56.2124 13.5467 55.7058 14C55.1991 14.44 54.8924 14.9733 54.7858 15.6L53.8458 20.9C53.7658 21.34 53.5658 21.6667 53.2458 21.88C52.9391 22.08 52.4924 22.18 51.9058 22.18L53.4658 13.3ZM66.9319 26.16C66.2252 26.16 65.8719 25.7933 65.8719 25.06C65.8719 24.9133 65.8785 24.8 65.8919 24.72C66.2385 24.7733 66.5185 24.8 66.7319 24.8C67.3052 24.8 67.7985 24.6333 68.2119 24.3C68.6252 23.98 69.1052 23.3733 69.6519 22.48L70.2119 21.58L67.9519 11.96C68.0452 11.92 68.1652 11.8867 68.3119 11.86C68.4585 11.8333 68.5852 11.82 68.6919 11.82C68.9719 11.82 69.2119 11.8933 69.4119 12.04C69.6119 12.1867 69.7385 12.3733 69.7919 12.6L71.2719 19.44L70.8319 20.24L70.9519 20.3L75.3519 12.6C75.4852 12.3733 75.6719 12.1867 75.9119 12.04C76.1652 11.8933 76.4319 11.82 76.7119 11.82C76.8319 11.82 76.9652 11.8333 77.1119 11.86C77.2719 11.8867 77.3985 11.92 77.4919 11.96L71.0519 22.98C70.3985 24.1 69.7452 24.9067 69.0919 25.4C68.4385 25.9067 67.7185 26.16 66.9319 26.16Z"
+                            fill="white" />
+                    </svg>
+                </a>
+                <div class="lg:hidden">
+                    <button class="navbar-burger flex items-center text-blue-600 p-3">
+                        <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Mobile menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul
+                    class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
+                    <li><a class="text-sm text-blue-600 font-bold" href="#">Hotel</a></li>
+                    <li class="text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                            class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                        </svg>
+                    </li>
+                    <li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">Flight</a></li>
+                    <li class="text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                            class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                        </svg>
+                    </li>
+                    <li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">Homestays & Villas</a></li>
+                    <li class="text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                            class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                        </svg>
+                    </li>
+                    <li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">Holiday Packages</a></li>
+                    <li class="text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                            class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                        </svg>
+                    </li>
+                    <li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">Contact</a></li>
+                </ul>
+                <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold border rounded-md transition duration-200"
+                    href="#">Sign In</a>
+                <a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-md border transition duration-200"
+                    href="#">Sign up</a>
+            </nav>
+            <div class="navbar-menu relative z-50 hidden">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+                <nav
+                    class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                    <div class="flex items-center mb-8">
+                        <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                            <svg width="116" height="31" viewBox="0 0 116 31" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M49 5C49 2.23858 51.2386 0 54 0H75C77.7614 0 80 2.23858 80 5V26C80 28.7614 77.7614 31 75 31H54C51.2386 31 49 28.7614 49 26V5Z"
+                                    fill="#3B81F6" />
+                                <path
+                                    d="M2.78 9.18C2.94 8.27333 3.60667 7.82 4.78 7.82L3.92 12.7C3.69333 12.86 3.52667 13.0067 3.42 13.14L3.46 13.24C3.94 12.8133 4.49333 12.4733 5.12 12.22C5.76 11.9533 6.35333 11.82 6.9 11.82C7.9 11.82 8.7 12.0867 9.3 12.62C9.91333 13.1533 10.22 13.84 10.22 14.68C10.22 14.88 10.2 15.08 10.16 15.28L9.56 18.7C9.37333 19.78 8.88667 20.6333 8.1 21.26C7.31333 21.8733 6.32667 22.18 5.14 22.18C3.82 22.18 2.80667 21.6067 2.1 20.46L2.02 20.54L2.34 21.04C2.22 21.8 1.6 22.18 0.48 22.18L2.78 9.18ZM5 20.64C5.8 20.64 6.44 20.4667 6.92 20.12C7.41333 19.7733 7.72 19.2733 7.84 18.62L8.42 15.36C8.44667 15.1467 8.46 14.9933 8.46 14.9C8.46 13.8733 7.74 13.36 6.3 13.36C5.60667 13.36 4.98 13.5467 4.42 13.92C3.86 14.2933 3.53333 14.74 3.44 15.26L2.84 18.72C2.82667 18.7867 2.82 18.8867 2.82 19.02C2.82 19.4867 3.02 19.8733 3.42 20.18C3.83333 20.4867 4.36 20.64 5 20.64ZM17.4342 13.36C16.7009 13.36 16.0409 13.58 15.4542 14.02C14.8809 14.46 14.5409 15.0067 14.4342 15.66L13.5142 20.9C13.4342 21.34 13.2342 21.6667 12.9142 21.88C12.5942 22.08 12.1409 22.18 11.5542 22.18L13.1142 13.3C13.3009 12.3133 13.9476 11.82 15.0542 11.82L14.8542 13.04C14.6809 13.2 14.4942 13.4 14.2942 13.64L14.3742 13.72C15.4676 12.4533 16.6342 11.82 17.8742 11.82C18.2742 11.82 18.5876 11.9067 18.8142 12.08C19.0542 12.2533 19.1742 12.4933 19.1742 12.8C19.1742 13.0933 19.0676 13.38 18.8542 13.66C18.4942 13.46 18.0209 13.36 17.4342 13.36ZM22.5519 10.32C22.2185 10.32 21.9452 10.2267 21.7319 10.04C21.5319 9.84 21.4319 9.58667 21.4319 9.28C21.4319 8.89333 21.5852 8.55333 21.8919 8.26C22.2119 7.96667 22.5785 7.82 22.9919 7.82C23.3119 7.82 23.5719 7.92 23.7719 8.12C23.9852 8.30667 24.0919 8.54667 24.0919 8.84C24.0919 9.22667 23.9319 9.57333 23.6119 9.88C23.3052 10.1733 22.9519 10.32 22.5519 10.32ZM21.1719 13.1C21.3319 12.2467 21.9852 11.82 23.1319 11.82L21.5319 20.9C21.4519 21.34 21.2519 21.6667 20.9319 21.88C20.6119 22.08 20.1585 22.18 19.5719 22.18L21.1719 13.1ZM26.1416 13.3C26.3282 12.3133 26.9749 11.82 28.0816 11.82L27.8616 13.1C27.6749 13.26 27.5016 13.44 27.3416 13.64L27.4216 13.72C27.9282 13.1333 28.5349 12.6733 29.2416 12.34C29.9616 11.9933 30.6749 11.82 31.3816 11.82C32.2749 11.82 32.9882 12.08 33.5216 12.6C34.0682 13.1067 34.3416 13.7667 34.3416 14.58C34.3416 14.7933 34.3216 15.02 34.2816 15.26L33.2816 20.9C33.2016 21.34 33.0016 21.6667 32.6816 21.88C32.3616 22.08 31.9082 22.18 31.3216 22.18L32.5016 15.44C32.5416 15.24 32.5616 15.06 32.5616 14.9C32.5616 13.8733 31.9416 13.36 30.7016 13.36C30.2082 13.36 29.7216 13.4667 29.2416 13.68C28.7749 13.8933 28.3749 14.18 28.0416 14.54C27.7216 14.8867 27.5282 15.26 27.4616 15.66L26.5416 20.9C26.4616 21.34 26.2616 21.6667 25.9416 21.88C25.6216 22.08 25.1682 22.18 24.5816 22.18L26.1416 13.3ZM38.9158 26.18C38.2891 26.18 37.7091 26.08 37.1758 25.88C36.6558 25.68 36.2358 25.4133 35.9158 25.08C35.6091 24.7467 35.4558 24.38 35.4558 23.98C35.4558 23.5667 35.5824 23.2467 35.8358 23.02C36.1024 22.8067 36.4758 22.7 36.9558 22.7C36.9424 22.7667 36.9358 22.8733 36.9358 23.02C36.9358 23.5533 37.1358 23.9733 37.5358 24.28C37.9358 24.5867 38.4824 24.74 39.1758 24.74C40.0291 24.74 40.7091 24.5267 41.2158 24.1C41.7224 23.6867 42.0424 23.0733 42.1758 22.26L42.3758 21.1C42.6291 20.9 42.7958 20.7533 42.8758 20.66L42.8358 20.56C42.3558 20.9867 41.7958 21.3333 41.1558 21.6C40.5291 21.8533 39.9358 21.98 39.3758 21.98C38.7491 21.98 38.1824 21.8533 37.6758 21.6C37.1691 21.3333 36.7691 20.9733 36.4758 20.52C36.1958 20.0667 36.0558 19.5667 36.0558 19.02C36.0558 18.9267 36.0691 18.76 36.0958 18.52L36.6558 15.3C36.8424 14.1933 37.3291 13.34 38.1158 12.74C38.9024 12.1267 39.9158 11.82 41.1558 11.82C42.4624 11.82 43.4558 12.3933 44.1358 13.54L44.2158 13.46C44.1091 13.26 44.0091 13.0933 43.9158 12.96C44.0358 12.2 44.6558 11.82 45.7758 11.82L43.9558 22.08C43.7158 23.4133 43.1624 24.4267 42.2958 25.12C41.4291 25.8267 40.3024 26.18 38.9158 26.18ZM39.9758 20.46C40.6691 20.46 41.2958 20.2733 41.8558 19.9C42.4291 19.5133 42.7624 19.06 42.8558 18.54L43.4158 15.28C43.4291 15.2133 43.4358 15.1267 43.4358 15.02C43.4358 14.5267 43.2291 14.1267 42.8158 13.82C42.4158 13.5 41.9024 13.34 41.2758 13.34C39.5958 13.34 38.6358 14.02 38.3958 15.38L37.8558 18.44C37.8291 18.5467 37.8158 18.7067 37.8158 18.92C37.8158 19.9467 38.5358 20.46 39.9758 20.46ZM87.1358 22.18C86.4024 22.18 85.8224 21.98 85.3958 21.58C84.9824 21.18 84.7758 20.6267 84.7758 19.92C84.7758 19.7067 84.7958 19.48 84.8358 19.24L85.8558 13.4H83.9958C84.0758 12.9467 84.2291 12.6 84.4558 12.36C84.6958 12.12 84.9958 12 85.3558 12H86.1158L86.4558 10.1C86.6158 9.24667 87.2691 8.82 88.4158 8.82L87.8358 12H90.4958C90.3358 12.9333 89.8358 13.4 88.9958 13.4H87.6158L86.5958 19.18C86.5558 19.38 86.5358 19.5533 86.5358 19.7C86.5358 20.0333 86.6224 20.2733 86.7958 20.42C86.9824 20.5667 87.2758 20.64 87.6758 20.64C88.1291 20.64 88.5958 20.52 89.0758 20.28C89.1691 20.4133 89.2158 20.58 89.2158 20.78C89.2158 21.18 89.0158 21.5133 88.6158 21.78C88.2158 22.0467 87.7224 22.18 87.1358 22.18ZM96.985 13.36C96.2517 13.36 95.5917 13.58 95.005 14.02C94.4317 14.46 94.0917 15.0067 93.985 15.66L93.065 20.9C92.985 21.34 92.785 21.6667 92.465 21.88C92.145 22.08 91.6917 22.18 91.105 22.18L92.665 13.3C92.8517 12.3133 93.4983 11.82 94.605 11.82L94.405 13.04C94.2317 13.2 94.045 13.4 93.845 13.64L93.925 13.72C95.0183 12.4533 96.185 11.82 97.425 11.82C97.825 11.82 98.1383 11.9067 98.365 12.08C98.605 12.2533 98.725 12.4933 98.725 12.8C98.725 13.0933 98.6183 13.38 98.405 13.66C98.045 13.46 97.5717 13.36 96.985 13.36ZM102.103 10.32C101.769 10.32 101.496 10.2267 101.283 10.04C101.083 9.84 100.983 9.58667 100.983 9.28C100.983 8.89333 101.136 8.55333 101.443 8.26C101.763 7.96667 102.129 7.82 102.543 7.82C102.863 7.82 103.123 7.92 103.323 8.12C103.536 8.30667 103.643 8.54667 103.643 8.84C103.643 9.22667 103.483 9.57333 103.163 9.88C102.856 10.1733 102.503 10.32 102.103 10.32ZM100.723 13.1C100.883 12.2467 101.536 11.82 102.683 11.82L101.083 20.9C101.003 21.34 100.803 21.6667 100.483 21.88C100.163 22.08 99.7093 22.18 99.1227 22.18L100.723 13.1ZM105.692 13.24C105.772 12.7867 105.979 12.44 106.312 12.2C106.646 11.9467 107.079 11.82 107.612 11.82L107.412 12.94C107.226 13.1133 107.059 13.2867 106.912 13.46L106.952 13.54C108.086 12.3933 109.299 11.82 110.592 11.82C111.579 11.82 112.372 12.0867 112.972 12.62C113.572 13.14 113.872 13.82 113.872 14.66C113.872 14.86 113.852 15.0733 113.812 15.3L113.212 18.72C113.026 19.8 112.519 20.6467 111.692 21.26C110.879 21.8733 109.859 22.18 108.632 22.18C108.059 22.18 107.526 22.06 107.032 21.82C106.539 21.58 106.119 21.2267 105.772 20.76L105.692 20.86C105.826 21.06 105.939 21.2067 106.032 21.3L105.412 24.82C105.252 25.7267 104.586 26.18 103.412 26.18L105.692 13.24ZM108.652 20.64C109.426 20.64 110.066 20.4667 110.572 20.12C111.079 19.76 111.386 19.2667 111.492 18.64L112.072 15.38C112.099 15.1933 112.112 15.0533 112.112 14.96C112.112 14.4533 111.919 14.06 111.532 13.78C111.159 13.5 110.619 13.36 109.912 13.36C109.206 13.36 108.579 13.5467 108.032 13.92C107.486 14.2933 107.166 14.7467 107.072 15.28L106.472 18.74C106.459 18.8067 106.452 18.9067 106.452 19.04C106.452 19.52 106.652 19.9067 107.052 20.2C107.452 20.4933 107.986 20.64 108.652 20.64Z"
+                                    fill="black" />
+                                <path
+                                    d="M53.4658 13.3C53.6524 12.3133 54.2924 11.82 55.3858 11.82L55.1658 13.1C54.9658 13.2867 54.7924 13.4667 54.6458 13.64L54.7258 13.72C55.8191 12.4533 56.9324 11.82 58.0658 11.82C58.5858 11.82 59.0258 11.9733 59.3858 12.28C59.7458 12.5867 59.9858 13.0133 60.1058 13.56C60.5591 13 61.0791 12.5733 61.6658 12.28C62.2658 11.9733 62.8791 11.82 63.5058 11.82C64.2924 11.82 64.9124 12.06 65.3658 12.54C65.8191 13.0067 66.0458 13.64 66.0458 14.44C66.0458 14.6133 66.0191 14.8867 65.9658 15.26L64.9658 20.9C64.8858 21.34 64.6858 21.6667 64.3658 21.88C64.0591 22.08 63.6124 22.18 63.0258 22.18L64.2258 15.36C64.2658 15.1333 64.2858 14.92 64.2858 14.72C64.2858 14.2667 64.1724 13.92 63.9458 13.68C63.7191 13.44 63.3791 13.32 62.9258 13.32C62.2991 13.32 61.7391 13.5333 61.2458 13.96C60.7524 14.3867 60.4524 14.92 60.3458 15.56L59.4058 20.9C59.3258 21.34 59.1324 21.6667 58.8258 21.88C58.5191 22.08 58.0724 22.18 57.4858 22.18L58.6858 15.36C58.7258 15.1333 58.7458 14.92 58.7458 14.72C58.7458 14.2667 58.6324 13.92 58.4058 13.68C58.1791 13.44 57.8391 13.32 57.3858 13.32C56.7724 13.32 56.2124 13.5467 55.7058 14C55.1991 14.44 54.8924 14.9733 54.7858 15.6L53.8458 20.9C53.7658 21.34 53.5658 21.6667 53.2458 21.88C52.9391 22.08 52.4924 22.18 51.9058 22.18L53.4658 13.3ZM66.9319 26.16C66.2252 26.16 65.8719 25.7933 65.8719 25.06C65.8719 24.9133 65.8785 24.8 65.8919 24.72C66.2385 24.7733 66.5185 24.8 66.7319 24.8C67.3052 24.8 67.7985 24.6333 68.2119 24.3C68.6252 23.98 69.1052 23.3733 69.6519 22.48L70.2119 21.58L67.9519 11.96C68.0452 11.92 68.1652 11.8867 68.3119 11.86C68.4585 11.8333 68.5852 11.82 68.6919 11.82C68.9719 11.82 69.2119 11.8933 69.4119 12.04C69.6119 12.1867 69.7385 12.3733 69.7919 12.6L71.2719 19.44L70.8319 20.24L70.9519 20.3L75.3519 12.6C75.4852 12.3733 75.6719 12.1867 75.9119 12.04C76.1652 11.8933 76.4319 11.82 76.7119 11.82C76.8319 11.82 76.9652 11.8333 77.1119 11.86C77.2719 11.8867 77.3985 11.92 77.4919 11.96L71.0519 22.98C70.3985 24.1 69.7452 24.9067 69.0919 25.4C68.4385 25.9067 67.7185 26.16 66.9319 26.16Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <button class="navbar-close">
+                            <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                    href="#">Hotel</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                    href="#">Flight</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                    href="#">Homestays & Villas</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                    href="#">Holiday packages</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                    href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <div class="flex w-full gap-2 pt-6">
+                            <a class="flex w-full items-center justify-center border px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl"
+                                href="#">Sign in</a>
+                            <a class="flex w-full items-center justify-center border px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
+                                href="#">Sign Up</a>
+                        </div>
+                        <p class="my-4 text-xs text-center text-gray-400">
+                            <span>Copyright © 2024</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex flex-col w-full max-w-screen-xl mx-auto px-5 py-5 pt-24">
+
+        <section id="hero">
+            <div class="md:py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+                <div class="flex flex-col items-center justify-between lg:flex-row">
+                    <div class="mb-10 lg:max-w-lg lg:pr-5 lg:mb-0">
+                        <div class="max-w-xl mb-6">
+                            <div>
+                                <p
+                                    class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+                                    Brand new
+                                </p>
+                            </div>
+                            <h2
+                                class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                                The quick, brown fox<br class="hidden md:block" />
+                                jumps over
+                                <span class="inline-block text-deep-purple-accent-400">a lazy dog</span>
+                            </h2>
+                            <p class="text-base text-gray-700 md:text-lg">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae. explicabo.
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-center md:flex-row">
+                            <a href="/"
+                                class="inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto md:mr-4 md:mb-0 bg-blue-500 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+                                <span class="mr-3">Start Shopping</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2" class="w-4">
+                                    <polyline fill="none" stroke="currentColor" stroke-miterlimit="10"
+                                        points="4,4 22,4 19,14 4,14 "></polyline>
+                                    <circle cx="4" cy="22" r="2" stroke-linejoin="miter" stroke-linecap="square"
+                                        stroke="none" fill="currentColor"></circle>
+                                    <circle cx="20" cy="22" r="2" stroke-linejoin="miter" stroke-linecap="square"
+                                        stroke="none" fill="currentColor"></circle>
+                                    <polyline fill="none" stroke="currentColor" stroke-miterlimit="10"
+                                        points="1,1 4,4 4,14 2,18 23,18 "></polyline>
+                                </svg>
+                            </a>
+                            <a href="/" aria-label=""
+                                class="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700">Get
+                                15% discount</a>
+                        </div>
+                    </div>
+                    <div class="relative lg:w-1/2">
+                        <img class="object-cover w-full h-56 rounded shadow-lg sm:h-96"
+                            src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+                            alt="" />
+                        <a href="/" aria-label="Play Video"
+                            class="absolute inset-0 flex items-center justify-center w-full h-full transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25">
+                            <div
+                                class="flex items-center justify-center w-16 h-16 transition duration-300 transform bg-gray-100 rounded-full shadow-2xl group-hover:scale-110">
+                                <svg class="w-10 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M16.53,11.152l-8-5C8.221,5.958,7.833,5.949,7.515,6.125C7.197,6.302,7,6.636,7,7v10 c0,0.364,0.197,0.698,0.515,0.875C7.667,17.958,7.833,18,8,18c0.184,0,0.368-0.051,0.53-0.152l8-5C16.822,12.665,17,12.345,17,12 S16.822,11.335,16.53,11.152z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="highlight">
+            <div class="flex w-full overflow-x-scroll md:overflow-x-hidden py-5 md:py-0">
+                <div
+                    class="flex w-fit items-center justify-center md:grid md:w-full md:grid-cols-3 lg:grid-cols-4 gap-2">
+                    <div class="flex w-80 md:w-full max-w-xs items-center justify-center rounded-md h-40 bg-violet-400">
+                        this is test
+                    </div>
+                    <div class="flex w-80 md:w-full max-w-xs items-center justify-center rounded-md h-40 bg-violet-400">
+                        this is test
+                    </div>
+                    <div class="flex w-80 md:w-full max-w-xs items-center justify-center rounded-md h-40 bg-violet-400">
+                        this is test
+                    </div>
+                    <div class="flex w-80 md:w-full max-w-xs items-center justify-center rounded-md h-40 bg-violet-400">
+                        this is test
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section id="Cities" class="pt-8">
+
+            <div class="flex flex-col w-fit sm:items-center sm:justify-center pb-6 md:mx-auto">
+                <h2 class="relative w-full text-center font-bold text-xl sm:text-2xl lg:text-3xl">
+                    <span class="shimmer-effect2">
+                        Cities
+                    </span>
+                    <span class="absolute left-0 right-0 bottom-0 h-1 bg-gradient-to-r from-blue-500 to-transparent"></span>
+                </h2>
+            </div>
+
+            <div class="flex w-full  py-5 ">
+                <div
+                    class=" w-fit items-center justify-center grid grid-cols-1 md:w-full md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="flex  w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div class="flex w-full gap-2 items-center justify-center">
+                            <div class="flex w-fit h-fit">
+                                <img class="rounded-full h-20 w-20 object-cover" src="https://promos.makemytrip.com/store/GoaDT.JPG" alt="">
+                            </div>
+                            <div class="flex w-fit flex-col gap-1">
+                                <h2 class="text-lg font-bold">Goa</h2>
+                                <p class="text-gray-500">Homestays - Villas & Apts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex  w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div class="flex w-full gap-2 items-center justify-center">
+                            <div class="flex w-fit h-fit">
+                                <img class="rounded-full h-20 w-20 object-cover" src="https://promos.makemytrip.com/store/MumbaiDT.JPG" alt="">
+                            </div>
+                            <div class="flex w-fit flex-col gap-1">
+                                <h2 class="text-lg font-bold">Mumbai</h2>
+                                <p class="text-gray-500">Homestays - Villas & Apts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex  w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div class="flex w-full gap-2 items-center justify-center">
+                            <div class="flex w-fit h-fit">
+                                <img class="rounded-full h-20 w-20 object-cover" src="https://promos.makemytrip.com/store/DelhiDT.JPG" alt="">
+                            </div>
+                            <div class="flex w-fit flex-col gap-1">
+                                <h2 class="text-lg font-bold">Delhi</h2>
+                                <p class="text-gray-500">Homestays - Villas & Apts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex  w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div class="flex w-full gap-2 items-center justify-center">
+                            <div class="flex w-fit h-fit">
+                                <img class="rounded-full h-20 w-20 object-cover" src="https://promos.makemytrip.com/altaccoimages/aa_collections_img/mukhteshwar.jpg" alt="">
+                            </div>
+                            <div class="flex w-fit flex-col gap-1">
+                                <h2 class="text-lg font-bold">Mukteshwar</h2>
+                                <p class="text-gray-500">Homestays - Villas & Apts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex  w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div class="flex w-full gap-2 items-center justify-center">
+                            <div class="flex w-fit h-fit">
+                                <img class="rounded-full h-20 w-20 object-cover" src="https://promos.makemytrip.com/altaccoimages/aa_collections_img/gokarna.jpg" alt="">
+                            </div>
+                            <div class="flex w-fit flex-col gap-1">
+                                <h2 class="text-lg font-bold">Gokarna</h2>
+                                <p class="text-gray-500">Homestays - Villas & Apts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex  w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div class="flex w-full gap-2 items-center justify-center">
+                            <div class="flex w-fit h-fit">
+                                <img class="rounded-full h-20 w-20 object-cover" src="https://promos.makemytrip.com/altaccoimages/aa_collections_img/conoor.jpg" alt="">
+                            </div>
+                            <div class="flex w-fit flex-col gap-1">
+                                <h2 class="text-lg font-bold">Coonoor</h2>
+                                <p class="text-gray-500">Homestays - Villas & Apts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex  w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div class="flex w-full gap-2 items-center justify-center">
+                            <div class="flex w-fit h-fit">
+                                <img class="rounded-full h-20 w-20 object-cover" src="https://promos.makemytrip.com/altaccoimages/aa_collections_img/kasol.jpg" alt="">
+                            </div>
+                            <div class="flex w-fit flex-col gap-1">
+                                <h2 class="text-lg font-bold">Kasol</h2>
+                                <p class="text-gray-500">Homestays - Villas & Apts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex  w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div class="flex w-full gap-2 items-center justify-center">
+                            <div class="flex w-fit h-fit">
+                                <img class="rounded-full h-20 w-20 object-cover" src="https://promos.makemytrip.com/altaccoimages/aa_collections_img/malvan.jpg" alt="">
+                            </div>
+                            <div class="flex w-fit flex-col gap-1">
+                                <h2 class="text-lg font-bold">Malvan</h2>
+                                <p class="text-gray-500">Homestays - Villas & Apts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="group" class="pt-8">
+
+            <div class="flex flex-col w-fit sm:items-center sm:justify-center pb-6 md:mx-auto">
+                <h2 class="relative w-full text-center font-bold text-xl sm:text-2xl lg:text-3xl">
+                    <span class="shimmer-effect2">
+                        Group Trips
+                    </span>
+                    <span class="absolute left-0 right-0 bottom-0 h-1 bg-gradient-to-r from-blue-500 to-transparent"></span>
+                </h2>
+            </div>
+
+            <div class="flex w-full overflow-x-scroll md:overflow-x-hidden py-5 ">
+                <div
+                    class="flex w-fit items-center justify-center md:grid md:w-full md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="flex flex-col w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div>
+                            <img class="rounded-md hover:-translate-y-3 transition-all" src="https://www.enjoykarado.com/images/packages/65b1f6f908a27.jpg" alt="">
+                        </div>
+                        <div class="flex w-full flex-col gap-2 py-2 px">
+                            <div id="title" class="text-xl">Ladakh- Peaks, Lakes and Beyond</div>
+                            <div class="font-bold text-xl">starting from</div>
+                            <div class="font-bold"><span class="text-gray-400"> <strike>Rs 40,000</strike> </span> Rs 32,000</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div>
+                            <img class="rounded-md hover:-translate-y-3 transition-all" src="https://www.enjoykarado.com/images/packages/65b1f6f908a27.jpg" alt="">
+                        </div>
+                        <div class="flex w-full flex-col gap-2 py-2 px">
+                            <div id="title" class="text-xl">Ladakh- Peaks, Lakes and Beyond</div>
+                            <div class="font-bold text-xl">starting from</div>
+                            <div class="font-bold"><span class="text-gray-400"> <strike>Rs 40,000</strike> </span> Rs 32,000</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div>
+                            <img class="rounded-md hover:-translate-y-3 transition-all" src="https://www.enjoykarado.com/images/packages/65b1f6f908a27.jpg" alt="">
+                        </div>
+                        <div class="flex w-full flex-col gap-2 py-2 px">
+                            <div id="title" class="text-xl">Ladakh- Peaks, Lakes and Beyond</div>
+                            <div class="font-bold text-xl">starting from</div>
+                            <div class="font-bold"><span class="text-gray-400"> <strike>Rs 40,000</strike> </span> Rs 32,000</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div>
+                            <img class="rounded-md hover:-translate-y-3 transition-all" src="https://www.enjoykarado.com/images/packages/65b1f6f908a27.jpg" alt="">
+                        </div>
+                        <div class="flex w-full flex-col gap-2 py-2 px">
+                            <div id="title" class="text-xl">Ladakh- Peaks, Lakes and Beyond</div>
+                            <div class="font-bold text-xl">starting from</div>
+                            <div class="font-bold"><span class="text-gray-400"> <strike>Rs 40,000</strike> </span> Rs 32,000</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div>
+                            <img class="rounded-md hover:-translate-y-3 transition-all" src="https://www.enjoykarado.com/images/packages/65b1f6f908a27.jpg" alt="">
+                        </div>
+                        <div class="flex w-full flex-col gap-2 py-2 px">
+                            <div id="title" class="text-xl">Ladakh- Peaks, Lakes and Beyond</div>
+                            <div class="font-bold text-xl">starting from</div>
+                            <div class="font-bold"><span class="text-gray-400"> <strike>Rs 40,000</strike> </span> Rs 32,000</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div>
+                            <img class="rounded-md hover:-translate-y-3 transition-all" src="https://www.enjoykarado.com/images/packages/65b1f6f908a27.jpg" alt="">
+                        </div>
+                        <div class="flex w-full flex-col gap-2 py-2 px">
+                            <div id="title" class="text-xl">Ladakh- Peaks, Lakes and Beyond</div>
+                            <div class="font-bold text-xl">starting from</div>
+                            <div class="font-bold"><span class="text-gray-400"> <strike>Rs 40,000</strike> </span> Rs 32,000</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div>
+                            <img class="rounded-md hover:-translate-y-3 transition-all" src="https://www.enjoykarado.com/images/packages/65b1f6f908a27.jpg" alt="">
+                        </div>
+                        <div class="flex w-full flex-col gap-2 py-2 px">
+                            <div id="title" class="text-xl">Ladakh- Peaks, Lakes and Beyond</div>
+                            <div class="font-bold text-xl">starting from</div>
+                            <div class="font-bold"><span class="text-gray-400"> <strike>Rs 40,000</strike> </span> Rs 32,000</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-80 md:w-full max-w-xs items-center justify-center rounded-md">
+                        <div>
+                            <img class="rounded-md hover:-translate-y-3 transition-all" src="https://www.enjoykarado.com/images/packages/65b1f6f908a27.jpg" alt="">
+                        </div>
+                        <div class="flex w-full flex-col gap-2 py-2 px">
+                            <div id="title" class="text-xl">Ladakh- Peaks, Lakes and Beyond</div>
+                            <div class="font-bold text-xl">starting from</div>
+                            <div class="font-bold"><span class="text-gray-400"> <strike>Rs 40,000</strike> </span> Rs 32,000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="Recruiters" class="flex w-full">
+            <div class="flex flex-col w-full py-8 md:py-10  lg:py-12  gap-5 lg:gap-7 xl:gap-10 max-w-7xl mx-auto">
+
+                <div class="flex flex-col w-fit sm:items-center sm:justify-center md:mx-auto">
+                    <h2 class="relative w-full text-center font-bold text-xl sm:text-2xl lg:text-3xl">
+                        <span class="shimmer-effect2">
+                            Top partners
+                        </span>
+                        <span class="absolute left-0 right-0 bottom-0 h-1 bg-gradient-to-r from-blue-500 to-transparent"></span>
+                    </h2>
+                </div>
+                
+                
+                <div class="flex flex-col w-full gap-3">
+                    <div class="swiper-container2 overflow-hidden w-full h-14 max-h-14 flex">
+                        <div class="swiper-wrapper ">
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/apple-logo-2400x2400-20220512.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/twitter-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/facebook-logo-2400x2400-20220518.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/wwf-logo-2400x2400-20220518.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/google-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/google-logo-2400x2400-20220519-1.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/google-logo-2400x2400-20220519-2.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-container2 overflow-hidden w-full h-14 max-h-14 flex">
+                        <div class="swiper-wrapper ">
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/ibm-logo-2400x2400-20220519-1.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/bmw-logo-2400x2400-20220519.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/mercedes-benz-logo-2400x2400-20220513-2.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/walmart-logo-2400x2400-20220513.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/visa-logo-2400x2400-20220513-1.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/ebay-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/fedex-logo-2400x2400-20220519.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/coca-cola-logo-2400x2400-20220513.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-container2 overflow-hidden w-full h-14 max-h-14 flex">
+                        <div class="swiper-wrapper ">
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/olympics-logo-2400x2400-20220513.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/disney-logo-2400x2400-20220513-2.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/gap-logo-2400x2400-20220519.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/mcdonalds-logo-2400x2400-20220519.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/pepsi-logo-2400x2400-20220513.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/microsoft-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/shell-logo-2400x2400-20220519-2.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/starbucks-logo-2400x2400-20220513-1.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-container2 overflow-hidden w-full h-14 max-h-14 flex">
+                        <div class="swiper-wrapper ">
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/target-logo-2400x2400-20220513.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/toyota-logo-2400x2400-20220519-1.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/samsung-logo-2400x2400-20220513.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/ford-logo-2400x2400-20220519-2.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/honda-logo-2400x2400-20220516.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/hewlett-packard-logo-2400x2400-20220516.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/exxon-mobil-logo-2400x2400-20220516.png?crop=1:1,smart&width=150&dpr=2" alt="">
+                            </div>
+                            <div class="swiper-slide items-center justify-center bg-white border border-gray-300 rounded-md flex px-2 py-1">
+                                <img loading="lazy" class="object-contain h-full w-fit" src="https://www.zarla.com/images/batman-logo-2400x2400-20220518-1.png?crop=1:1,smart&width=150&dpr=2"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="bg-white py-5">
+                <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div class="flex flex-col w-fit sm:items-center sm:justify-center md:mx-auto">
+                        <h2 class="relative w-full text-center font-bold text-xl sm:text-2xl lg:text-3xl">
+                            <span class="shimmer-effect2">
+                                Testimonials
+                            </span>
+                            <span class="absolute left-0 right-0 bottom-0 h-1 bg-gradient-to-r from-blue-500 to-transparent"></span>
+                        </h2>
+                    </div>
+                  <div class="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
+                    <div class="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-3">
+                      <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+                        <figure class="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
+                          <blockquote class="text-gray-900">
+                            <p>“Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.”</p>
+                          </blockquote>
+                          <figcaption class="mt-6 flex items-center gap-x-4">
+                            <img class="h-10 w-10 rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div>
+                              <div class="font-semibold text-gray-900">Leslie Alexander</div>
+                              <div class="text-gray-600">@lesliealexander</div>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+                        <figure class="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
+                          <blockquote class="text-gray-900">
+                            <p>“Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.”</p>
+                          </blockquote>
+                          <figcaption class="mt-6 flex items-center gap-x-4">
+                            <img class="h-10 w-10 rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div>
+                              <div class="font-semibold text-gray-900">Leslie Alexander</div>
+                              <div class="text-gray-600">@lesliealexander</div>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+                        <figure class="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
+                          <blockquote class="text-gray-900">
+                            <p>“Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.”</p>
+                          </blockquote>
+                          <figcaption class="mt-6 flex items-center gap-x-4">
+                            <img class="h-10 w-10 rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div>
+                              <div class="font-semibold text-gray-900">Leslie Alexander</div>
+                              <div class="text-gray-600">@lesliealexander</div>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+                        <figure class="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
+                          <blockquote class="text-gray-900">
+                            <p>“Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.”</p>
+                          </blockquote>
+                          <figcaption class="mt-6 flex items-center gap-x-4">
+                            <img class="h-10 w-10 rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div>
+                              <div class="font-semibold text-gray-900">Leslie Alexander</div>
+                              <div class="text-gray-600">@lesliealexander</div>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+                        <figure class="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
+                          <blockquote class="text-gray-900">
+                            <p>“Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.”</p>
+                          </blockquote>
+                          <figcaption class="mt-6 flex items-center gap-x-4">
+                            <img class="h-10 w-10 rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div>
+                              <div class="font-semibold text-gray-900">Leslie Alexander</div>
+                              <div class="text-gray-600">@lesliealexander</div>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+                        <figure class="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
+                          <blockquote class="text-gray-900">
+                            <p>“Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.”</p>
+                          </blockquote>
+                          <figcaption class="mt-6 flex items-center gap-x-4">
+                            <img class="h-10 w-10 rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div>
+                              <div class="font-semibold text-gray-900">Leslie Alexander</div>
+                              <div class="text-gray-600">@lesliealexander</div>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+        </section>
+
+        <section id="blogs">
+            <div class="bg-white py-5">
+                <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div class="flex flex-col w-fit sm:items-center sm:justify-center md:mx-auto">
+                        <h2 class="relative w-full text-center font-bold text-xl sm:text-2xl lg:text-3xl">
+                            <span class="shimmer-effect2">
+                                Blogs
+                            </span>
+                            <span class="absolute left-0 right-0 bottom-0 h-1 bg-gradient-to-r from-blue-500 to-transparent"></span>
+                        </h2>
+                    </div>
+                  <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                    <article class="flex flex-col items-start justify-between">
+                      <div class="relative w-full">
+                        <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80" alt="" class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+                        <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                      </div>
+                      <div class="max-w-xl">
+                        <div class="mt-8 flex items-center gap-x-4 text-xs">
+                          <time datetime="2020-03-16" class="text-gray-500">Mar 16, 2020</time>
+                          <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
+                        </div>
+                        <div class="group relative">
+                          <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                            <a href="#">
+                              <span class="absolute inset-0"></span>
+                              Boost your conversion rate
+                            </a>
+                          </h3>
+                          <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
+                        </div>
+                        <div class="relative mt-8 flex items-center gap-x-4">
+                          <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-100">
+                          <div class="text-sm leading-6">
+                            <p class="font-semibold text-gray-900">
+                              <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Michael Foster
+                              </a>
+                            </p>
+                            <p class="text-gray-600">Co-Founder / CTO</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="flex flex-col items-start justify-between">
+                        <div class="relative w-full">
+                          <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80" alt="" class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+                          <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                        </div>
+                        <div class="max-w-xl">
+                          <div class="mt-8 flex items-center gap-x-4 text-xs">
+                            <time datetime="2020-03-16" class="text-gray-500">Mar 16, 2020</time>
+                            <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
+                          </div>
+                          <div class="group relative">
+                            <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                              <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Boost your conversion rate
+                              </a>
+                            </h3>
+                            <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
+                          </div>
+                          <div class="relative mt-8 flex items-center gap-x-4">
+                            <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-100">
+                            <div class="text-sm leading-6">
+                              <p class="font-semibold text-gray-900">
+                                <a href="#">
+                                  <span class="absolute inset-0"></span>
+                                  Michael Foster
+                                </a>
+                              </p>
+                              <p class="text-gray-600">Co-Founder / CTO</p>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+
+                      <article class="flex flex-col items-start justify-between">
+                        <div class="relative w-full">
+                          <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80" alt="" class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+                          <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                        </div>
+                        <div class="max-w-xl">
+                          <div class="mt-8 flex items-center gap-x-4 text-xs">
+                            <time datetime="2020-03-16" class="text-gray-500">Mar 16, 2020</time>
+                            <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
+                          </div>
+                          <div class="group relative">
+                            <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                              <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Boost your conversion rate
+                              </a>
+                            </h3>
+                            <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
+                          </div>
+                          <div class="relative mt-8 flex items-center gap-x-4">
+                            <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-100">
+                            <div class="text-sm leading-6">
+                              <p class="font-semibold text-gray-900">
+                                <a href="#">
+                                  <span class="absolute inset-0"></span>
+                                  Michael Foster
+                                </a>
+                              </p>
+                              <p class="text-gray-600">Co-Founder / CTO</p>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                  </div>
+                </div>
+              </div>
+              
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t">
+        <div class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                <div>
+                    <div class="text-teal-600">
+                        <svg width="116" height="31" viewBox="0 0 116 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M49 5C49 2.23858 51.2386 0 54 0H75C77.7614 0 80 2.23858 80 5V26C80 28.7614 77.7614 31 75 31H54C51.2386 31 49 28.7614 49 26V5Z"
+                                fill="#3B81F6" />
+                            <path
+                                d="M2.78 9.18C2.94 8.27333 3.60667 7.82 4.78 7.82L3.92 12.7C3.69333 12.86 3.52667 13.0067 3.42 13.14L3.46 13.24C3.94 12.8133 4.49333 12.4733 5.12 12.22C5.76 11.9533 6.35333 11.82 6.9 11.82C7.9 11.82 8.7 12.0867 9.3 12.62C9.91333 13.1533 10.22 13.84 10.22 14.68C10.22 14.88 10.2 15.08 10.16 15.28L9.56 18.7C9.37333 19.78 8.88667 20.6333 8.1 21.26C7.31333 21.8733 6.32667 22.18 5.14 22.18C3.82 22.18 2.80667 21.6067 2.1 20.46L2.02 20.54L2.34 21.04C2.22 21.8 1.6 22.18 0.48 22.18L2.78 9.18ZM5 20.64C5.8 20.64 6.44 20.4667 6.92 20.12C7.41333 19.7733 7.72 19.2733 7.84 18.62L8.42 15.36C8.44667 15.1467 8.46 14.9933 8.46 14.9C8.46 13.8733 7.74 13.36 6.3 13.36C5.60667 13.36 4.98 13.5467 4.42 13.92C3.86 14.2933 3.53333 14.74 3.44 15.26L2.84 18.72C2.82667 18.7867 2.82 18.8867 2.82 19.02C2.82 19.4867 3.02 19.8733 3.42 20.18C3.83333 20.4867 4.36 20.64 5 20.64ZM17.4342 13.36C16.7009 13.36 16.0409 13.58 15.4542 14.02C14.8809 14.46 14.5409 15.0067 14.4342 15.66L13.5142 20.9C13.4342 21.34 13.2342 21.6667 12.9142 21.88C12.5942 22.08 12.1409 22.18 11.5542 22.18L13.1142 13.3C13.3009 12.3133 13.9476 11.82 15.0542 11.82L14.8542 13.04C14.6809 13.2 14.4942 13.4 14.2942 13.64L14.3742 13.72C15.4676 12.4533 16.6342 11.82 17.8742 11.82C18.2742 11.82 18.5876 11.9067 18.8142 12.08C19.0542 12.2533 19.1742 12.4933 19.1742 12.8C19.1742 13.0933 19.0676 13.38 18.8542 13.66C18.4942 13.46 18.0209 13.36 17.4342 13.36ZM22.5519 10.32C22.2185 10.32 21.9452 10.2267 21.7319 10.04C21.5319 9.84 21.4319 9.58667 21.4319 9.28C21.4319 8.89333 21.5852 8.55333 21.8919 8.26C22.2119 7.96667 22.5785 7.82 22.9919 7.82C23.3119 7.82 23.5719 7.92 23.7719 8.12C23.9852 8.30667 24.0919 8.54667 24.0919 8.84C24.0919 9.22667 23.9319 9.57333 23.6119 9.88C23.3052 10.1733 22.9519 10.32 22.5519 10.32ZM21.1719 13.1C21.3319 12.2467 21.9852 11.82 23.1319 11.82L21.5319 20.9C21.4519 21.34 21.2519 21.6667 20.9319 21.88C20.6119 22.08 20.1585 22.18 19.5719 22.18L21.1719 13.1ZM26.1416 13.3C26.3282 12.3133 26.9749 11.82 28.0816 11.82L27.8616 13.1C27.6749 13.26 27.5016 13.44 27.3416 13.64L27.4216 13.72C27.9282 13.1333 28.5349 12.6733 29.2416 12.34C29.9616 11.9933 30.6749 11.82 31.3816 11.82C32.2749 11.82 32.9882 12.08 33.5216 12.6C34.0682 13.1067 34.3416 13.7667 34.3416 14.58C34.3416 14.7933 34.3216 15.02 34.2816 15.26L33.2816 20.9C33.2016 21.34 33.0016 21.6667 32.6816 21.88C32.3616 22.08 31.9082 22.18 31.3216 22.18L32.5016 15.44C32.5416 15.24 32.5616 15.06 32.5616 14.9C32.5616 13.8733 31.9416 13.36 30.7016 13.36C30.2082 13.36 29.7216 13.4667 29.2416 13.68C28.7749 13.8933 28.3749 14.18 28.0416 14.54C27.7216 14.8867 27.5282 15.26 27.4616 15.66L26.5416 20.9C26.4616 21.34 26.2616 21.6667 25.9416 21.88C25.6216 22.08 25.1682 22.18 24.5816 22.18L26.1416 13.3ZM38.9158 26.18C38.2891 26.18 37.7091 26.08 37.1758 25.88C36.6558 25.68 36.2358 25.4133 35.9158 25.08C35.6091 24.7467 35.4558 24.38 35.4558 23.98C35.4558 23.5667 35.5824 23.2467 35.8358 23.02C36.1024 22.8067 36.4758 22.7 36.9558 22.7C36.9424 22.7667 36.9358 22.8733 36.9358 23.02C36.9358 23.5533 37.1358 23.9733 37.5358 24.28C37.9358 24.5867 38.4824 24.74 39.1758 24.74C40.0291 24.74 40.7091 24.5267 41.2158 24.1C41.7224 23.6867 42.0424 23.0733 42.1758 22.26L42.3758 21.1C42.6291 20.9 42.7958 20.7533 42.8758 20.66L42.8358 20.56C42.3558 20.9867 41.7958 21.3333 41.1558 21.6C40.5291 21.8533 39.9358 21.98 39.3758 21.98C38.7491 21.98 38.1824 21.8533 37.6758 21.6C37.1691 21.3333 36.7691 20.9733 36.4758 20.52C36.1958 20.0667 36.0558 19.5667 36.0558 19.02C36.0558 18.9267 36.0691 18.76 36.0958 18.52L36.6558 15.3C36.8424 14.1933 37.3291 13.34 38.1158 12.74C38.9024 12.1267 39.9158 11.82 41.1558 11.82C42.4624 11.82 43.4558 12.3933 44.1358 13.54L44.2158 13.46C44.1091 13.26 44.0091 13.0933 43.9158 12.96C44.0358 12.2 44.6558 11.82 45.7758 11.82L43.9558 22.08C43.7158 23.4133 43.1624 24.4267 42.2958 25.12C41.4291 25.8267 40.3024 26.18 38.9158 26.18ZM39.9758 20.46C40.6691 20.46 41.2958 20.2733 41.8558 19.9C42.4291 19.5133 42.7624 19.06 42.8558 18.54L43.4158 15.28C43.4291 15.2133 43.4358 15.1267 43.4358 15.02C43.4358 14.5267 43.2291 14.1267 42.8158 13.82C42.4158 13.5 41.9024 13.34 41.2758 13.34C39.5958 13.34 38.6358 14.02 38.3958 15.38L37.8558 18.44C37.8291 18.5467 37.8158 18.7067 37.8158 18.92C37.8158 19.9467 38.5358 20.46 39.9758 20.46ZM87.1358 22.18C86.4024 22.18 85.8224 21.98 85.3958 21.58C84.9824 21.18 84.7758 20.6267 84.7758 19.92C84.7758 19.7067 84.7958 19.48 84.8358 19.24L85.8558 13.4H83.9958C84.0758 12.9467 84.2291 12.6 84.4558 12.36C84.6958 12.12 84.9958 12 85.3558 12H86.1158L86.4558 10.1C86.6158 9.24667 87.2691 8.82 88.4158 8.82L87.8358 12H90.4958C90.3358 12.9333 89.8358 13.4 88.9958 13.4H87.6158L86.5958 19.18C86.5558 19.38 86.5358 19.5533 86.5358 19.7C86.5358 20.0333 86.6224 20.2733 86.7958 20.42C86.9824 20.5667 87.2758 20.64 87.6758 20.64C88.1291 20.64 88.5958 20.52 89.0758 20.28C89.1691 20.4133 89.2158 20.58 89.2158 20.78C89.2158 21.18 89.0158 21.5133 88.6158 21.78C88.2158 22.0467 87.7224 22.18 87.1358 22.18ZM96.985 13.36C96.2517 13.36 95.5917 13.58 95.005 14.02C94.4317 14.46 94.0917 15.0067 93.985 15.66L93.065 20.9C92.985 21.34 92.785 21.6667 92.465 21.88C92.145 22.08 91.6917 22.18 91.105 22.18L92.665 13.3C92.8517 12.3133 93.4983 11.82 94.605 11.82L94.405 13.04C94.2317 13.2 94.045 13.4 93.845 13.64L93.925 13.72C95.0183 12.4533 96.185 11.82 97.425 11.82C97.825 11.82 98.1383 11.9067 98.365 12.08C98.605 12.2533 98.725 12.4933 98.725 12.8C98.725 13.0933 98.6183 13.38 98.405 13.66C98.045 13.46 97.5717 13.36 96.985 13.36ZM102.103 10.32C101.769 10.32 101.496 10.2267 101.283 10.04C101.083 9.84 100.983 9.58667 100.983 9.28C100.983 8.89333 101.136 8.55333 101.443 8.26C101.763 7.96667 102.129 7.82 102.543 7.82C102.863 7.82 103.123 7.92 103.323 8.12C103.536 8.30667 103.643 8.54667 103.643 8.84C103.643 9.22667 103.483 9.57333 103.163 9.88C102.856 10.1733 102.503 10.32 102.103 10.32ZM100.723 13.1C100.883 12.2467 101.536 11.82 102.683 11.82L101.083 20.9C101.003 21.34 100.803 21.6667 100.483 21.88C100.163 22.08 99.7093 22.18 99.1227 22.18L100.723 13.1ZM105.692 13.24C105.772 12.7867 105.979 12.44 106.312 12.2C106.646 11.9467 107.079 11.82 107.612 11.82L107.412 12.94C107.226 13.1133 107.059 13.2867 106.912 13.46L106.952 13.54C108.086 12.3933 109.299 11.82 110.592 11.82C111.579 11.82 112.372 12.0867 112.972 12.62C113.572 13.14 113.872 13.82 113.872 14.66C113.872 14.86 113.852 15.0733 113.812 15.3L113.212 18.72C113.026 19.8 112.519 20.6467 111.692 21.26C110.879 21.8733 109.859 22.18 108.632 22.18C108.059 22.18 107.526 22.06 107.032 21.82C106.539 21.58 106.119 21.2267 105.772 20.76L105.692 20.86C105.826 21.06 105.939 21.2067 106.032 21.3L105.412 24.82C105.252 25.7267 104.586 26.18 103.412 26.18L105.692 13.24ZM108.652 20.64C109.426 20.64 110.066 20.4667 110.572 20.12C111.079 19.76 111.386 19.2667 111.492 18.64L112.072 15.38C112.099 15.1933 112.112 15.0533 112.112 14.96C112.112 14.4533 111.919 14.06 111.532 13.78C111.159 13.5 110.619 13.36 109.912 13.36C109.206 13.36 108.579 13.5467 108.032 13.92C107.486 14.2933 107.166 14.7467 107.072 15.28L106.472 18.74C106.459 18.8067 106.452 18.9067 106.452 19.04C106.452 19.52 106.652 19.9067 107.052 20.2C107.452 20.4933 107.986 20.64 108.652 20.64Z"
+                                fill="black" />
+                            <path
+                                d="M53.4658 13.3C53.6524 12.3133 54.2924 11.82 55.3858 11.82L55.1658 13.1C54.9658 13.2867 54.7924 13.4667 54.6458 13.64L54.7258 13.72C55.8191 12.4533 56.9324 11.82 58.0658 11.82C58.5858 11.82 59.0258 11.9733 59.3858 12.28C59.7458 12.5867 59.9858 13.0133 60.1058 13.56C60.5591 13 61.0791 12.5733 61.6658 12.28C62.2658 11.9733 62.8791 11.82 63.5058 11.82C64.2924 11.82 64.9124 12.06 65.3658 12.54C65.8191 13.0067 66.0458 13.64 66.0458 14.44C66.0458 14.6133 66.0191 14.8867 65.9658 15.26L64.9658 20.9C64.8858 21.34 64.6858 21.6667 64.3658 21.88C64.0591 22.08 63.6124 22.18 63.0258 22.18L64.2258 15.36C64.2658 15.1333 64.2858 14.92 64.2858 14.72C64.2858 14.2667 64.1724 13.92 63.9458 13.68C63.7191 13.44 63.3791 13.32 62.9258 13.32C62.2991 13.32 61.7391 13.5333 61.2458 13.96C60.7524 14.3867 60.4524 14.92 60.3458 15.56L59.4058 20.9C59.3258 21.34 59.1324 21.6667 58.8258 21.88C58.5191 22.08 58.0724 22.18 57.4858 22.18L58.6858 15.36C58.7258 15.1333 58.7458 14.92 58.7458 14.72C58.7458 14.2667 58.6324 13.92 58.4058 13.68C58.1791 13.44 57.8391 13.32 57.3858 13.32C56.7724 13.32 56.2124 13.5467 55.7058 14C55.1991 14.44 54.8924 14.9733 54.7858 15.6L53.8458 20.9C53.7658 21.34 53.5658 21.6667 53.2458 21.88C52.9391 22.08 52.4924 22.18 51.9058 22.18L53.4658 13.3ZM66.9319 26.16C66.2252 26.16 65.8719 25.7933 65.8719 25.06C65.8719 24.9133 65.8785 24.8 65.8919 24.72C66.2385 24.7733 66.5185 24.8 66.7319 24.8C67.3052 24.8 67.7985 24.6333 68.2119 24.3C68.6252 23.98 69.1052 23.3733 69.6519 22.48L70.2119 21.58L67.9519 11.96C68.0452 11.92 68.1652 11.8867 68.3119 11.86C68.4585 11.8333 68.5852 11.82 68.6919 11.82C68.9719 11.82 69.2119 11.8933 69.4119 12.04C69.6119 12.1867 69.7385 12.3733 69.7919 12.6L71.2719 19.44L70.8319 20.24L70.9519 20.3L75.3519 12.6C75.4852 12.3733 75.6719 12.1867 75.9119 12.04C76.1652 11.8933 76.4319 11.82 76.7119 11.82C76.8319 11.82 76.9652 11.8333 77.1119 11.86C77.2719 11.8867 77.3985 11.92 77.4919 11.96L71.0519 22.98C70.3985 24.1 69.7452 24.9067 69.0919 25.4C68.4385 25.9067 67.7185 26.16 66.9319 26.16Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+
+                    <p class="mt-4 max-w-xs text-gray-500">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non cupiditate quae nam
+                        molestias.
+                    </p>
+
+                    <ul class="mt-8 flex gap-6">
+                        <li>
+                            <a href="#" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:opacity-75">
+                                <span class="sr-only">Facebook</span>
+
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:opacity-75">
+                                <span class="sr-only">Instagram</span>
+
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:opacity-75">
+                                <span class="sr-only">Twitter</span>
+
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:opacity-75">
+                                <span class="sr-only">GitHub</span>
+
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" rel="noreferrer" target="_blank"
+                                class="text-gray-700 transition hover:opacity-75">
+                                <span class="sr-only">Dribbble</span>
+
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
+                    <div>
+                        <p class="font-medium text-gray-900">Services</p>
+
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75"> 1on1 Coaching </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75"> Company Review </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75"> Accounts Review </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75"> HR Consulting </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75"> SEO Optimisation </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="font-medium text-gray-900">Company</p>
+
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75"> About </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75"> Meet the Team </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75"> Accounts Review </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="font-medium text-gray-900">Helpful Links</p>
+
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75"> Contact </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75"> FAQs </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75"> Live Chat </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="font-medium text-gray-900">Legal</p>
+
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75"> Accessibility </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75"> Returns Policy </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75"> Refund Policy </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75"> Hiring Statistics </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-xs text-gray-500">&copy; 2022. Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
